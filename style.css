@@ -8,6 +8,17 @@
     font-weight: 800;
 }
 
+:root {
+    --color0: #8074D3;
+    --color1: #7266BA;
+    --color2: #897BE0;
+    --color3: #332E54;
+    --color4: #5A5194;
+
+    --font-default: "Sofia Sans", sans-serif;
+    --font-highlight: "Sometype Mono", monospace;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -15,11 +26,10 @@
 
 body {
     background: #373536;
-
 }
 
 header {
-    background-color: #8074D3;
+    background-color: var(--color0);
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -30,9 +40,10 @@ header {
 }
 
 .header-title {
-    font-family: "Sofia Sans", sans-serif;
+    font-family: var(--font-default);
     font-weight: 800;
     color: white;
+    font-size: 28px;
 }
 
 .header-nav {
@@ -42,11 +53,16 @@ header {
 }
 
 .header-nav-item {
-    font-family: "Sofia Sans", sans-serif;
+    font-family: var(--font-default);
     font-weight: 800;
     color: white;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
+    transition: .5s color;
+}
+
+.header-nav-item:hover {
+    color: rgb(221, 221, 221);
 }
 
 .header-nav-item-image {
@@ -55,14 +71,14 @@ header {
     width: 12px;
 }
 
-main {
+.main-startpage {
     height: 93.27vh;
     background-image: url("images/main-background.png");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
     display: flex;
-    position: absolute;
+    position: relative;
     z-index: -2;
 }
 
@@ -73,24 +89,120 @@ main {
     width: 35%;
     align-self: center;
     margin-left: 7vw;
-    font-size: 24px;
-    gap: 80px;
+    gap: 100px;
 }
 
 .main-divleft-title {
-    font-family: "Sometype Mono", monospace;
+    font-family: var(--font-highlight);
     color: white;
     letter-spacing: 1px;
+    font-size: 38px;
 }
 
 .main-divleft-button {
-    background: #9C99F2;
+    background: var(--color2);
     border: none;
-    font-family: "Sofia Sans", sans-serif;
+    font-family: var(--font-default);
     color: white;
-    font-size: 35px;
+    font-size: 28px;
     padding: 15px 20px;
-    border-radius: 15px;
-    box-shadow: 3px 4px 0px rgba(207, 201, 242, 0.4);
-    text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.61);
+    border-radius: 13px;
+    box-shadow: 3px 4px 0px rgba(208, 202, 242, 0.255);
+    text-shadow: 2px 2px 6px #0000006e;
+    transition: .5s background-color;
+}
+
+.main-divleft-button:active {
+    position: relative;
+    box-shadow: 0px 0px 0px #cfc9f241;
+    top: 3px;
+    left: 2px;
+}
+
+.main-divleft-button:hover {
+    cursor: pointer;
+    background-color: var(--color1);
+}
+
+.about-product {
+    height: 100vh;
+    background-image: url("images/about-product/about-product-background.jpg");
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    padding-top: 1px;
+    margin-top: 70px;
+}
+
+.about-product-title {
+    background: linear-gradient(90deg, var(--color4) 1.07%, var(--color2) 100%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-top: 25px;
+    font-family: var(--font-highlight);
+    color: white;
+    text-align: center;
+    padding-block: 10px;
+    text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.445);
+}
+
+.about-product-content {
+    display: flex;
+    flex-direction: row;
+    height: 90%;
+    align-items: center;
+    gap: 100px;
+}
+
+.about-product-content-abouttext {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    gap: 50px;
+}
+
+.about-product-content-abouttext-div {
+    display: flex;
+    flex-direction: row;
+    margin-left: 7px;
+    gap: 50px;
+    align-items: center;
+}
+
+.about-product-content-abouttext-div-title {
+    width: 0%;
+    word-wrap: break-word;
+    font-family: var(--font-highlight);
+    color: white;
+    font-size: 19px;
+    
+}
+
+.about-product-content-abouttext-div-paragraph {
+    font-family: var(--font-highlight);
+    font-size: 20px;
+    color: white;
+    letter-spacing: 4px;
+}
+
+.about-product-content-back {
+    background-image: url("images/about-product/product-background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding: 150px 200px;
+}
+
+.about-product-content-back-product {
+    position: relative;
+    left: 150px;
+    width: 35%;
+}
+
+.about-product-content-back-product0 {
+    margin-bottom: 50px;
+    margin-right: -80px;
+}
+
+.about-product-content-back-product1 {
+    margin-right: 150px;
 }
