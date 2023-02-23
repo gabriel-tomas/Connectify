@@ -412,5 +412,37 @@ header {
         border-radius: 0px;
         border-block: 1px solid var(--color4);
     }
+    
 
+}
+
+@media (max-width: 459px) {
+    .main-startpage {
+        height: 103vh;
+    }
+    
+    .main-divleft {
+        padding-top: 90px;
+    }
+
+    .about-product-content-back::before {
+        bottom: -95vh;
+        padding-bottom: 45px;
+    }
+
+    .about-product-content-back-product {
+        width: 30%;
+        padding-inline: 120px;
+        margin-inline: auto;
+        border-radius: 0px;
+        border-block: 1px solid var(--color4);
+    }
+    
+    .about-product-content-abouttext-div {
+        gap: 25px;
+    }
+
+    .about-product-content-abouttext-div-paragraph {
+        font-size: 1.05em;
+    }
 }
