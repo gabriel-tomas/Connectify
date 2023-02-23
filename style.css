@@ -387,6 +387,8 @@ header {
 
     .about-product-content-back {
         gap: 0;
+        flex-direction: column;
+        width: 100%;
     }
 
     .about-product-content-back::before {
@@ -422,12 +424,6 @@ header {
     .about-product-content-back::before {
         bottom: -95vh;
         padding-bottom: 45px;
-    }
-    
-    .about-product-content-back {
-
-        flex-direction: column;
-        width: 100%;
     }
     
     .about-product-content-abouttext-div {
