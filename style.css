@@ -39,6 +39,18 @@ header {
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
 }
 
+#menu {
+    display: none;
+}
+
+.header-label {
+    display: none;
+}
+
+.header-label-image {
+    width: 34px;
+}
+
 .header-title {
     font-family: var(--font-default);
     font-weight: 800;
@@ -125,7 +137,8 @@ header {
 }
 
 .about-product {
-    height: 100vh;
+    height: fit-content;
+    background-color: var(--color2);
     background-image: url("images/about-product/about-product-background.jpg");
     background-repeat: no-repeat;
     background-position: center top;
@@ -205,4 +218,199 @@ header {
 
 .about-product-content-back-product1 {
     margin-right: 150px;
+}
+
+@media (max-width: 1200px) {
+    .about-product-content {
+        padding-block: 50px;
+    }
+
+    .about-product-content-back {
+        background-image: none;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        gap: 50px;
+        flex-wrap: wrap;
+    }
+
+    .about-product-content-back-product0, .about-product-content-back-product1 {
+        margin: 0;
+    }
+
+    .about-product-content-back-product {
+        position: static;
+        width: 37%;
+        padding: 20px;
+        border-radius: 20px;
+        background-image: linear-gradient(45deg, var(--color4), var(--color1));
+    }
+}
+
+@media (max-width: 1026px) {
+    body {
+        font-size: .9em;
+    }
+
+    .main-startpage {
+        background-position: center center;
+    }
+
+    .main-divleft {
+        background-image: linear-gradient(to right, var(--color3), #332e54d3);
+        margin: 0;
+        align-self: auto;
+        padding: 50px 20px 20px 20px;
+        width: 40%;
+        gap: 50px;
+    }
+
+    .about-product {
+        margin-top: 0px;
+        background-size: cover;
+        background-position: center center;
+    }
+
+    .about-product-title {
+        font-size: 1.2em;
+        padding-inline: 70px;
+    }
+
+    .about-product-content {
+        flex-direction: column;
+    }
+
+    .about-product-content-abouttext {
+        width: 100%;
+    }
+
+    .about-product-content-abouttext-div-title {
+        font-size: 1.05em;
+    }
+
+    .about-product-content-abouttext-div-paragraph {
+        font-size: 1.2em;
+    }
+}
+
+@media (max-width: 785px) {
+    .main-startpage {
+        background-size: cover;
+    }
+
+    .main-divleft-title {
+       font-size: 2.4em;
+    }
+}
+
+@media (max-width: 700px) {
+    .header-label {
+        display: block;
+    }
+
+    .header-nav {
+        flex-direction: column;
+        position: absolute;
+        right: 0px;
+        background-color: #887be0dc;
+        padding: 40px 20px 20px 20px;
+        border-radius: 5px;
+        align-items: flex-start;
+        gap: 60px;
+        position: absolute;
+        top: -100vh;
+        transition: 1s top;
+        z-index: -1;
+    }
+
+    #menu:checked ~ .header-nav {
+        top: 50px;
+    }
+
+    .header-nav-item {
+        font-size: 2em;
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        margin-left: 30px;
+    }
+
+    .header-nav-item-image {
+        width: 20px;
+        height: fit-content;
+        transform: rotate(90deg);
+    }
+}
+
+@media (max-width: 589px) {
+    .header-nav {
+        width: 88.5vw;
+        height: 100%;
+        top: -110vh;
+        left: 0px;
+        background-color: #887be0f8;
+        padding: 50px 20px 20px 20px;
+        border-radius: 0px;
+    }
+
+    .header-nav-item {
+        font-size: 3em;
+    }
+
+    .main-divleft-button {
+        font-size: 1.5em;
+    }
+
+    .main-divleft {
+        width: 100%;
+        background-color: #332e5423;
+        gap: 100px;
+        padding-top: 100px;
+    }
+
+    .main-divleft-title {
+        font-size: 2.8em;
+        text-shadow: 2px 2px 0px var(--color2);
+    }
+
+    .main-divleft-button {
+        width: 100%;
+        border-radius: 100px;
+    }
+    
+    .main-startpage {
+        background-attachment: fixed;
+    }
+    
+    .about-product-content {
+        padding-block: 20px;
+        gap: 100px;
+    }
+
+    .about-product-content-back {
+        gap: 0;
+    }
+
+    .about-product-content-back::before {
+        content: "Product image";
+        position: absolute;
+        font-family: var(--font-default);
+        color: white;
+        bottom: -520px;
+        left: 0;
+        font-size: 1.5em;
+        width: 100%;
+        padding-top: 15px;
+        text-align: center;
+        box-shadow: 0px -10px 10px rgba(0, 0, 0, 0.247);
+    }
+
+    .about-product-content-back-product {
+        width: 50%;
+        padding-inline: 120px;
+        margin-inline: auto;
+        border-radius: 0px;
+        border-block: 1px solid var(--color4);
+    }
+
 }
