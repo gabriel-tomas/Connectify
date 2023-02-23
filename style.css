@@ -37,6 +37,7 @@ header {
     padding-inline: 7vw;
     padding-block: 7px;
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+    z-index: 2;
 }
 
 #menu {
@@ -91,7 +92,6 @@ header {
     background-size: contain;
     display: flex;
     position: relative;
-    z-index: -2;
 }
 
 .main-divleft {
@@ -102,6 +102,12 @@ header {
     align-self: center;
     margin-left: 7vw;
     gap: 100px;
+    background-image: linear-gradient(to right, var(--color3), #332e54d3);
+    margin: 0;
+    align-self: auto;
+    padding: 170px 20px 20px 100px;
+    width: 100%;
+    gap: 100px;
 }
 
 .main-divleft-title {
@@ -109,6 +115,7 @@ header {
     color: white;
     letter-spacing: 1px;
     font-size: 38px;
+    width: 40%;
 }
 
 .main-divleft-button {
@@ -144,7 +151,7 @@ header {
     background-position: center top;
     background-size: cover;
     padding-top: 1px;
-    margin-top: 70px;
+    margin-top: 0px;
 }
 
 .about-product-title {
@@ -255,16 +262,14 @@ header {
     }
 
     .main-divleft {
-        background-image: linear-gradient(to right, var(--color3), #332e54d3);
-        margin: 0;
-        align-self: auto;
-        padding: 50px 20px 20px 20px;
-        width: 40%;
-        gap: 50px;
+        padding: 150px 20px 20px 100px;
+    }
+
+    .main-divleft-title {
+        width: 60%;
     }
 
     .about-product {
-        margin-top: 0px;
         background-size: cover;
         background-position: center center;
     }
@@ -291,7 +296,7 @@ header {
     }
 }
 
-@media (max-width: 785px) {
+@media (max-width: 855px) {
     .main-startpage {
         background-size: cover;
     }
@@ -355,20 +360,27 @@ header {
         font-size: 3em;
     }
 
+    .main-startpage {
+        height: fit-content;
+    }
+
     .main-divleft-button {
         font-size: 1.5em;
     }
 
     .main-divleft {
         width: 100%;
+        padding: 50px 20px 50px 20px;
         background-color: #332e5423;
         gap: 100px;
-        padding-top: 100px;
+        padding-top: 50px;
+        height: fit-content;
     }
 
     .main-divleft-title {
         font-size: 2.8em;
         text-shadow: 2px 2px 0px var(--color2);
+        width: 100%;
     }
 
     .main-divleft-button {
@@ -413,12 +425,8 @@ header {
 }
 
 @media (max-width: 459px) {
-    .main-startpage {
-        height: 103vh;
-    }
-    
     .main-divleft {
-        padding-top: 90px;
+        padding-top: 50px;
     }
 
     .about-product-content-back::before {
