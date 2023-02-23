@@ -90,6 +90,7 @@ header {
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
+    background-attachment: fixed;
     display: flex;
     position: relative;
 }
@@ -386,10 +387,6 @@ header {
     .main-divleft-button {
         width: 100%;
         border-radius: 100px;
-    }
-    
-    .main-startpage {
-        background-attachment: fixed;
     }
     
     .about-product-content {
