@@ -86,7 +86,7 @@ header {
 
 .main-startpage {
     height: 93.27vh;
-    background-image: url("images/main-background.png");
+    background-image: url("images/main-background.svg");
     background-repeat: no-repeat;
     background-position: right center;
     background-size: contain;
