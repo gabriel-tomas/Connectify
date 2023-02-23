@@ -317,7 +317,7 @@ header {
         gap: 60px;
         position: absolute;
         top: -100vh;
-        transition: 1s top;
+        transition: .5s top;
         z-index: -1;
     }
 
