@@ -43,7 +43,7 @@ header {
     box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
 }
 
-#menu {
+#menu, #itemsboxinput0, #itemsboxinput1 {
     display: none;
 }
 
@@ -77,6 +77,10 @@ header {
     transition: .5s color;
 }
 
+.header-nav-item-text {
+    cursor: pointer;
+}
+
 .header-nav-item:hover {
     color: rgb(221, 221, 221);
 }
@@ -85,6 +89,72 @@ header {
     display: block;
     margin: 0 auto;
     width: 12px;
+    transition: .3s transform;
+}
+
+#itemsboxinput0:hover ~ .header-nav-item-image0, .itemsboxmenu0:hover ~ .header-nav .header-nav-item-image0 {
+    transform: rotate(180deg);
+}
+
+#itemsboxinput1:hover ~ .header-nav-item-image1, .itemsboxmenu1:hover ~ .header-nav .header-nav-item-image1 {
+    transform: rotate(180deg);
+}
+
+.itemsboxmenu {
+    position: absolute;
+    z-index: 2;
+    background-color: #887be0da;
+    display: flex;
+    visibility: hidden;
+    filter: brightness(50%);
+    flex-direction: column;
+    gap: 10px;
+    padding: 15px 40px;
+    border-radius: 5px;
+    top: 40px;
+    transition: .3s filter, .2s visibility;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.212);
+}
+
+.itemsboxmenu0 {
+    top: 50px;
+    right: 400px;
+}
+
+.itemsboxmenu0:hover {
+    visibility: visible;
+    filter: brightness(100%);
+}
+
+header:has(#itemsboxinput0:hover) > .itemsboxmenu0 {
+    visibility: visible;
+    filter: brightness(100%);
+}
+
+.itemsboxmenu1 {
+    top: 50px;
+    right: 220px;
+}
+
+.itemsboxmenu1:hover {
+    visibility: visible;
+    filter: brightness(100%);
+}
+
+header:has(#itemsboxinput1:hover) > .itemsboxmenu1 {
+    visibility: visible;
+    filter: brightness(100%);
+}
+
+.itemsboxmenu-item {
+    color: white;
+    text-decoration: none;
+    font-family: var(--font-default);
+    transition: .5s color;
+}
+
+header:has(.itemsboxmenu-item:hover) .itemsboxmenu-item:not(.itemsboxmenu-item:hover) {
+    color: var(--color4);
 }
 
 .main-startpage {
