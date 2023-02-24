@@ -88,7 +88,6 @@ header {
 }
 
 .main-startpage {
-    height: 93.27vh;
     background-image: url("images/main-background.svg");
     background-repeat: no-repeat;
     background-position: right center;
@@ -96,14 +95,12 @@ header {
     background-attachment: fixed;
     display: flex;
     position: relative;
-    
 }
 
 .main-divleft {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    width: 35%;
     align-self: center;
     margin-left: 7vw;
     gap: 100px;
@@ -112,7 +109,8 @@ header {
     align-self: auto;
     padding: 170px 20px 20px 100px;
     width: 100%;
-    gap: 100px;  
+    height: 77.3vh;
+    gap: 100px;
 }
 
 .main-divleft-title {
@@ -120,7 +118,8 @@ header {
     color: white;
     letter-spacing: 1px;
     font-size: 38px;
-    width: 40%; 
+    width: 40%;
+    text-shadow: 2px 2px 0px var(--color2);
 }
 
 .main-divleft-button {
@@ -160,14 +159,14 @@ header {
 }
 
 .about-product-title {
-    background: linear-gradient(90deg, var(--color4) 1.07%, var(--color2) 100%);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-top: 25px;
+    margin-top: 20px;
     font-family: var(--font-highlight);
     color: white;
     text-align: center;
-    padding-block: 10px;
-    text-shadow: 0px 3px 10px rgba(0, 0, 0, 0.445);
+    padding-bottom: 20px;
+    font-size: 24px;
+    text-shadow: 2px 2px 0px var(--color2);
 }
 
 .about-product-content {
@@ -199,7 +198,7 @@ header {
     font-family: var(--font-highlight);
     color: white;
     font-size: 19px;
-    
+    text-shadow: 2px 2px 0px var(--color2);
 }
 
 .about-product-content-abouttext-div-paragraph {
@@ -280,7 +279,7 @@ header {
     }
 
     .about-product-title {
-        font-size: 1.2em;
+        font-size: 1.5em;
         padding-inline: 70px;
     }
 
@@ -370,33 +369,31 @@ header {
         font-size: 3em;
     }
 
-    .main-startpage {
-        height: fit-content;
-    }
-
     .main-divleft-button {
         font-size: 1.5em;
     }
 
     .main-divleft {
         width: 100%;
-        padding: 50px 20px 50px 20px;
+        padding: 80px 20px 80px 20px;
         background-color: #332e5423;
         gap: 100px;
-        padding-top: 50px;
-        height: fit-content;
+        justify-content: center;
     }
 
     .main-divleft-title {
         font-size: 2.8em;
-        text-shadow: 2px 2px 0px var(--color2);
         width: 100%;
-        
     }
 
     .main-divleft-button {
         width: 100%;
         border-radius: 15px;
+    }
+
+    .about-product-title {
+        background: linear-gradient(90deg, var(--color4) 1.07%, var(--color2) 100%);
+        padding-block: 10px;
     }
     
     .about-product-content {
@@ -429,7 +426,6 @@ header {
         font-family: var(--font-default);
         font-size: 28px;
         padding-inline: 15px;
-        text-shadow: 2px 2px 0px var(--color2);
     }
 
     .about-product-content-abouttext {
@@ -450,7 +446,6 @@ header {
         text-align: center;
         padding: 3px 3px 3px 35px;
         margin-left: -35px;
-        text-shadow: 2px 2px 0px var(--color2);
     }
 
     .about-product-content-abouttext-div-paragraph {
