@@ -413,13 +413,14 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
         gap: 50px;
         position: absolute;
         top: -100vh;
-        transition: .5s top;
+        visibility: hidden;
+        transition: .5s top, .5s visibility;
         z-index: 1;
-        
     }
 
     #menu:checked ~ .header-nav {
         top: 52px;
+        visibility: visible;
     }
 
     #menu:checked ~ .itemsboxmenu {
@@ -481,19 +482,28 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
     .header-nav {
         width: 100vw;
         height: 100vh;
-        top: -110vh;
+        top: -112vh;
         left: 0px;
         background-color: #887be0f8;
-        padding: 50px 20px 20px 20px;
         border-radius: 0px;
         gap: 60px;
         font-size: .7em;
-        position: fixed;
+        padding: 0;
+        padding-top: 40px;
         border-top: 1px solid var(--color1);
+        z-index: 3;
+    }
+
+    .header-nav-item {
+        padding-left: 20px;
     }
 
     body:has(#menu:checked) {
-        overflow-y: hidden;
+        overflow: hidden;
+    }
+
+    body:has(#menu:checked) main {
+        touch-action: none;
     }
 
     .header-nav-item0, .header-nav-item1 {
@@ -506,15 +516,16 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
         border-radius: 0px;
         margin-left: 15px;
         background-color: transparent;
+        z-index: 4;
     }
 
     .itemsboxmenu0 {
-        top: 135px;
+        top: 125px;
         left: 0px;
     }
 
     .itemsboxmenu1 {
-        top: 352px;
+        top: 342px;
         left: 0px;
     }
 
