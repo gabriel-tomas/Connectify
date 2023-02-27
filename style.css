@@ -482,7 +482,7 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
     .header-nav {
         width: 100vw;
         height: 100vh;
-        top: -112vh;
+        top: 52px;
         left: 0px;
         background-color: #887be0f8;
         border-radius: 0px;
@@ -492,18 +492,16 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
         padding-top: 40px;
         border-top: 1px solid var(--color1);
         z-index: 3;
+        overflow: hidden;
+        transition: none;
     }
 
     .header-nav-item {
         padding-left: 20px;
     }
 
-    body:has(#menu:checked) {
-        overflow: hidden;
-    }
-
     body:has(#menu:checked) main {
-        touch-action: none;
+        display: none;
     }
 
     .header-nav-item0, .header-nav-item1 {
@@ -517,6 +515,10 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
         margin-left: 15px;
         background-color: transparent;
         z-index: 4;
+    }
+
+    #menu:checked ~ .itemsboxmenu {
+        transition: none;
     }
 
     .itemsboxmenu0 {
