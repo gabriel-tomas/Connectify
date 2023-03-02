@@ -28,11 +28,10 @@
 }
 
 body {
-    background: #373536;
-    
+    background: #3A365B;
 }
 
-header {
+#mainheader {
     background-color: var(--color0);
     display: flex;
     flex-direction: row;
@@ -40,7 +39,7 @@ header {
     justify-content: space-between;
     padding-inline: 7vw;
     padding-block: 7px;
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.25);
+    box-shadow: 0px 3px 9px rgba(0, 0, 0, 0.295);
 }
 
 #menu, #itemsboxinput0, #itemsboxinput1 {
@@ -54,6 +53,23 @@ header {
 
 .header-label-image {
     width: 34px;
+}
+
+.header-nav-backlabel {
+    padding-inline: 20px;
+    padding-block: 15px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    width: 89.3vw;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.24);
+    display: none;
+}
+
+.header-nav-backlabel-back {
+    width: 38px;
+    cursor: pointer;
 }
 
 .header-title {
@@ -178,9 +194,8 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
     background-image: linear-gradient(to right, var(--color3), #332e54d3);
     margin: 0;
     align-self: auto;
-    padding: 170px 20px 20px 100px;
+    padding: 170px 20px 170px 100px;
     width: 100%;
-    height: 77.3vh;
     gap: 100px;
 }
 
@@ -345,7 +360,7 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
     }
 
     .main-divleft {
-        padding: 150px 20px 20px 100px;
+        padding: 100px 20px 100px 100px;
     }
 
     .main-divleft-title {
@@ -410,7 +425,7 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
         padding: 40px 20px 20px 20px;
         border-radius: 0px 0px 0px 5px;
         align-items: flex-start;
-        gap: 50px;
+        gap: 40px;
         position: absolute;
         top: -100vh;
         visibility: hidden;
@@ -454,7 +469,7 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
     }
 
     .itemsboxmenu1 {
-        top: 335px;
+        top: 325px;
         right: 45px;
         transition: .3s filter, .1s visibility;
     }
@@ -476,24 +491,46 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
     .main-divleft {
         padding-top: 100px;
     }
+    
+    .main-divleft-title {
+        width: 90%;
+    }
 }
 
 @media (max-width: 589px) {
+    body {
+        overflow-x: hidden;
+    }
+
+    #mainheader {
+        background-color: #7266bac9;
+        position: sticky;
+        top: 0px;
+        z-index: 1;
+        backdrop-filter: blur(7px);
+    }
+    
     .header-nav {
         width: 100vw;
         height: 100vh;
-        top: 52px;
         left: 0px;
-        background-color: #887be0f8;
+        background-color: #887be0;
         border-radius: 0px;
-        gap: 60px;
+        gap: 30px;
         font-size: .7em;
         padding: 0;
-        padding-top: 40px;
         border-top: 1px solid var(--color1);
         z-index: 3;
         overflow: hidden;
         transition: none;
+    }
+
+    #menu:checked ~ .header-nav {
+        top: 0px;
+    }
+    
+    .header-nav-backlabel {
+        display: flex;
     }
 
     .header-nav-item {
@@ -522,12 +559,12 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
     }
 
     .itemsboxmenu0 {
-        top: 125px;
+        top: 127px;
         left: 0px;
     }
 
     .itemsboxmenu1 {
-        top: 342px;
+        top: 315px;
         left: 0px;
     }
 
@@ -541,6 +578,7 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
 
     .main-divleft {
         width: 100%;
+        height: 80vh;
         padding: 80px 20px 80px 20px;
         background-color: #332e5423;
         gap: 100px;
@@ -653,8 +691,20 @@ header:has(.itemsboxmenu0-item:hover) .itemsboxmenu0-item:not(.itemsboxmenu0-ite
     }
 }
 
-@media (max-width: 333px) {
-    .header-nav {
-        width: 85vw;
+@media (max-width: 334px) {
+    .main-divleft-title {
+        font-size: 10vw;
+    }
+
+    .main-divleft-button {
+        font-size: 6vw;
+    }
+
+    .about-product-title {
+        font-size: 8vw;
+    }
+
+    .about-product-content-abouttext-div-title {
+        font-size: 7vw;
     }
 }
