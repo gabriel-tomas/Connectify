@@ -4,7 +4,7 @@ Site imaginário sobre uma loja de cabos customizáveis.
 A intenção desse projeto é para práticar HTML e CSS.
 
 ## O que usei
-Conceitos de background, como imagem de fundo, attachment, size, position, dropdown menus, media queries, transition.
+Conceitos de background, como imagem de fundo, attachment, size, position, dropdown menus, media queries, transition. Outros conceitos foram usados que podem ser encontrados no código.
 
 O Figma foi usado para fazer o [wireframe do projeto](https://www.figma.com/file/RTWFYEmUZUOWINziZYCJBD/Connectify?node-id=0%3A1&t=oUnjY9P5SJk8orx3-0).
 
